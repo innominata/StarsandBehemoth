@@ -24,24 +24,24 @@ namespace StarsandBehemoth
             Harmony.CreateAndPatchAll(typeof(StarsandBehemoth));
             
         }
-        [HarmonyPostfix, HarmonyPatch(typeof(ScoloManager), "Start")]
-        public static void Start(ref ScoloManager __instance)
-        {
-            __instance.SpawnScolo(2);
-            
-        }
+        // [HarmonyPostfix, HarmonyPatch(typeof(ScoloManager), "Start")]
+        // public static void Start(ref ScoloManager __instance)
+        // {
+        //     __instance.SpawnScolo(2);
+        //     
+        // }
         [HarmonyPostfix]
         [HarmonyPatch(typeof(EnemyAI), "Start")]
         public static void EnemyAI(ref EnemyAI __instance)
         {
-            Logger.LogInfo("%");
+            // Logger.LogInfo("%");
             var scoloTransform = __instance.scoloChild.transform;
-            Logger.LogInfo(__instance.gameObject.activeSelf);
-            Logger.LogInfo(__instance.gameObject.name);
-            Logger.LogInfo("-");
-
-            Logger.LogInfo(scoloTransform.localScale);
-            Logger.LogInfo("-");
+            // Logger.LogInfo(__instance.gameObject.activeSelf);
+            // Logger.LogInfo(__instance.gameObject.name);
+            // Logger.LogInfo("-");
+            //
+            // Logger.LogInfo(scoloTransform.localScale);
+            // Logger.LogInfo("-");
             if (new Random().Next(0, 20) > 17)
             {
                 scoloTransform.localScale = new Vector3(3, 3, 3);

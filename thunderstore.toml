@@ -4,7 +4,7 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "innominata"
 name = "StarsandBehemoth"
-versionNumber = "1.0.0"
+versionNumber = "1.0.2"
 description = "Adds a Behemoth Scolomorph as a random spawn"
 websiteUrl = "https://github.com/innominata/StarsandBehemoth"
 containsNsfwContent = false
